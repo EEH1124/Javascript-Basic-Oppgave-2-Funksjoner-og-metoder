@@ -1,32 +1,36 @@
-//Oppgave 1 Functions and Methods:
+// Task 1 Functions and Methods:
 
 function checkNumber(num) {
   return num % 2 === 0 ? "Even" : "Odd";
 }
 
-// Oppgave 2
+// Examples of checknumber usages
+console.log(checkNumber(6)); // "Even"
+console.log(checkNumber(9)); // "Odd"
+console.log(checkNumber(0)); // "Even"
+console.log(checkNumber(-1)); // "Odd"
+
+
+// Task 2 
 
 const toUpperCaseText = (text) => {
   // Convert input text to uppercase and append an exclamation mark
   return text.toUpperCase() + "!";
 };
 
-// Example usage of toUpperCaseText
+// Example of toUpperCaseText
 console.log(toUpperCaseText("This is cool")); // "THIS IS COOL!"
 console.log(toUpperCaseText("Hello world")); // "HELLO WORLD!"
 console.log(toUpperCaseText("Javascript is hard")); // "JAVASCRIPT IS HARD!"
 
+
 // Task 3: Return a greeting based on the time of day
-const greeting = (name, hour) =>
-  hour < 0 || hour > 23
-    ? "Invalid time"
-    : hour <= 5
-    ? `Good night ${name}`
-    : hour <= 11
-    ? `Good morning ${name}`
-    : hour <= 17
-    ? `Good afternoon ${name}`
-    : `Good evening ${name}`;
+const greeting = (name, hour) => 
+    hour < 0 || hour > 23 ? "Invalid time":
+    hour <= 5 ? `Good night ${name}`:
+    hour <= 11 ? `Good morning ${name}`:
+    hour <= 17 ? `Good afternoon ${name}`: 
+    `Good evening ${name}`;
 
 // Example usage of greeting
 console.log(greeting("Elvis", 10)); // "Good morning Elvis"
@@ -36,8 +40,9 @@ console.log(greeting("Mike", 23)); // "Good evening Mike"
 
 // Task 4: Remove the first and last element in an array
 const removeEdges = (array) => {
+   
   // Remove first and last element using slice
-  return array.slice(1, -1);
+    return array.slice(1, -1);
 };
 
 // Example usage of removeEdges
@@ -46,9 +51,9 @@ console.log(removeEdges(["One", "Two", "Three"])); // ["Two"]
 
 // Task 5: Replace "difficult" with "fun" and trim whitespace
 const modifyText = (text) => {
-  // Trim whitespace and replace "difficult" with "fun"
-  return text.trim().replace("difficult", "fun");
-};
+    // Trim whitespace and replace "difficult" with "fun"
+    return text.trim().replace("difficult", "fun");
+}
 
 // Example usage of modifyText
 console.log(modifyText("  Javascript is difficult   ")); // "Javascript is fun"
@@ -71,8 +76,10 @@ items.splice(0, 2, "Highlighter");
 const itemsString = items.join(" | ");
 
 // Extra: Filter out elements containing the letter "e"
-const filteredItems = items.filter((item) => item.includes("e"));
+const filteredItems = items.filter(item => item.includes("e"));
 
 // Example usage of items
 console.log(itemsString); // "Highlighter | Ruler | Pencil | Marker"
 console.log(filteredItems); // Array with elements containing "e"
+
+
